@@ -19,3 +19,4 @@ real_time_face_tracking/data/train/images
 real_time_face_tracking/data/train/labels
 real_time_face_tracking/data/val/images
 real_time_face_tracking/data/val/labels
+real_time_face_tracking/facetracker.h5
