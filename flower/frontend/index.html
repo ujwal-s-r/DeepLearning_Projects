@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌸 Flower Classifier</h1>
+            <p>Upload a flower image to get AI-powered classification</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-content">
+                        <div class="upload-icon">📷</div>
+                        <h3>Drop your flower image here</h3>
+                        <p>or <span class="browse-link">browse files</span></p>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                    </div>
+                </div>
+                
+                <div class="image-preview" id="image-preview" style="display: none;">
+                    <img id="preview-img" src="" alt="Preview">
+                    <button class="remove-btn" id="remove-btn">✕</button>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <button class="classify-btn" id="classify-btn" disabled>
+                    <span class="btn-text">Classify Flower</span>
+                    <span class="loading" style="display: none;">🔄 Processing...</span>
+                </button>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <h3>Classification Results</h3>
+                <div class="prediction-card" id="prediction-card">
+                    <div class="predicted-class" id="predicted-class"></div>
+                    <div class="confidence" id="confidence"></div>
+                    <div class="all-predictions" id="all-predictions"></div>
+                </div>
+            </div>
+
+            <div class="error-section" id="error-section" style="display: none;">
+                <div class="error-message" id="error-message"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by PyTorch & Deep Learning</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
